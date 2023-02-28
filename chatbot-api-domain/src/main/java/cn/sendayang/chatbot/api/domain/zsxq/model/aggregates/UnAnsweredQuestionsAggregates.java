@@ -1,6 +1,6 @@
 package cn.sendayang.chatbot.api.domain.zsxq.model.aggregates;
 
-import cn.sendayang.chatbot.api.domain.zsxq.model.req.ReqData;
+import cn.sendayang.chatbot.api.domain.zsxq.model.res.RespData;
 
 /**
  * @author 杨小宝
@@ -14,7 +14,7 @@ import cn.sendayang.chatbot.api.domain.zsxq.model.req.ReqData;
 public class UnAnsweredQuestionsAggregates {
 
     private boolean succeeded;
-    private ReqData resp_data;
+    private RespData resp_data;
 
     public boolean isSucceeded(){
         return succeeded;
@@ -24,11 +24,11 @@ public class UnAnsweredQuestionsAggregates {
         this.succeeded = succeeded;
     }
 
-    public ReqData getResp_data(){
+    public RespData getResp_data(){
         return resp_data;
     }
 
-    public void setResp_data(ReqData resp_data){
+    public void setResp_data(RespData resp_data){
         this.resp_data = resp_data;
     }
 }
