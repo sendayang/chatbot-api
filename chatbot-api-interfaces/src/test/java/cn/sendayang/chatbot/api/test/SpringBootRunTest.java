@@ -43,7 +43,7 @@ public class SpringBootRunTest {
       logger.info("测试结果：{}", JSON.toJSONString(unAnsweredQuestionsAggregates));
 
       List<Topics> topics = unAnsweredQuestionsAggregates.getResp_data().getTopics();
-      for (Topics topic :topics){
+      for (Topics topic : topics){
          String topicId = topic.getTopic_id();
          String text = topic.getQuestion().getText();
          logger.info("topicId:{},Text:{}",topicId,text);
