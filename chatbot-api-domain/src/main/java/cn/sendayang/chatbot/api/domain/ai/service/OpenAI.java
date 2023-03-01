@@ -36,7 +36,7 @@ public class OpenAI implements IOpenAI {
     private String openAiKey;
 
     @Value("${chatbot-api.openAIModel}")
-    private String openAiModel;
+    private String openAIModel;
 
     @Override
     public String doChatGPT(String question) throws IOException {
@@ -47,7 +47,7 @@ public class OpenAI implements IOpenAI {
         post.addHeader("Content-Type", "application/json");
         post.addHeader("Authorization", "Bearer " + openAiKey);
 
-        String paramJson = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + question + "\", \"temperature\": 0, \"max_tokens\": 1024}";
+        String paramJson = "{\"model\": \"" + openAIModel + "\", \"prompt\": \"" + question + "\", \"temperature\": 0, \"max_tokens\": 1024}";
 
         StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
         post.setEntity(stringEntity);

@@ -55,12 +55,14 @@ public class ChatbotSchedule {
                return;
            }
 
+           /**
            GregorianCalendar calendar = new GregorianCalendar();
            int hour = calendar.get(Calendar.HOUR_OF_DAY);
            if (hour > 22 || hour < 7){
                logger.info("打烊时间不工作，AI下班了！");
                return;
            }
+          */
 
            //1.检索问题
            UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsTopicId(groupId, cookie);
