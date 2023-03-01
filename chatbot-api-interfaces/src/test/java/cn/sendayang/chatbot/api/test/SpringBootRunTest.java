@@ -1,5 +1,6 @@
 package cn.sendayang.chatbot.api.test;
 
+import cn.sendayang.chatbot.api.domain.ai.IOpenAI;
 import cn.sendayang.chatbot.api.domain.zsxq.IZsxqApi;
 import cn.sendayang.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
 import cn.sendayang.chatbot.api.domain.zsxq.model.vo.Topics;
@@ -37,6 +38,9 @@ public class SpringBootRunTest {
    @Resource
    private IZsxqApi zsxqApi;
 
+   @Resource
+   private IOpenAI openAI;
+
    @Test
    public void test_zsxqApi() throws IOException {
       UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsTopicId(groupId, cookie);
@@ -49,6 +53,13 @@ public class SpringBootRunTest {
          logger.info("topicId:{},Text:{}",topicId,text);
       }
 
+   }
+
+
+   @Test
+   public void test_openAi() throws IOException {
+      String response = openAI.doChatGPT("帮我写一个java冒泡排序");
+      logger.info("测试结果：{}", response);
    }
 
 }

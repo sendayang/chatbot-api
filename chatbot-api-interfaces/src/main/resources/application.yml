@@ -5,3 +5,5 @@ server:
 chatbot-api:
   groupid: 15552521881542
   cookie: _uab_collina=166101377849273171538702; sensorsdata2015jssdkcross={"distinct_id":"182bc2264ee18-08a9e4e3d624198-1b525635-1484784-182bc2264efaa3","first_id":"","props":{"$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":""},"identities":"eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTgyYmMyMjY0ZWUxOC0wOGE5ZTRlM2Q2MjQxOTgtMWI1MjU2MzUtMTQ4NDc4NC0xODJiYzIyNjRlZmFhMyJ9","history_login_id":{"name":"","value":""},"$device_id":"182bc2264ee18-08a9e4e3d624198-1b525635-1484784-182bc2264efaa3"}; zsxq_access_token=5DF5C668-D6AE-CB07-459D-E3AFE5AD2FB2_2C487193DD642552; abtest_env=beta
+  openAiKey: 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
+  openAIModel: text-davinci-003
